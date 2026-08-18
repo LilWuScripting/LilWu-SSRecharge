@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+.idea/
+.reference-*/
+*.user
+*.suo
+tools/rcon-password.clixml
