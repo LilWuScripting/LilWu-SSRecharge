@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>LilWu.SSRecharge</AssemblyName>
+    <RootNamespace>LilWu.SSRecharge</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>LilWu</Authors>
+    <Description>Recharges Soul Shards stored in a Soul Shard container and limits its slots to the server clan size.</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <VRisingServerPath Condition="'$(VRisingServerPath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\VRisingDedicatedServer</VRisingServerPath>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <Reference>
+      <Private>false</Private>
+    </Reference>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony" HintPath="$(VRisingServerPath)\BepInEx\core\0Harmony.dll" />
+    <Reference Include="BepInEx.Core" HintPath="$(VRisingServerPath)\BepInEx\core\BepInEx.Core.dll" />
+    <Reference Include="BepInEx.Unity.Common" HintPath="$(VRisingServerPath)\BepInEx\core\BepInEx.Unity.Common.dll" />
+    <Reference Include="BepInEx.Unity.IL2CPP" HintPath="$(VRisingServerPath)\BepInEx\core\BepInEx.Unity.IL2CPP.dll" />
+    <Reference Include="Il2CppInterop.Runtime" HintPath="$(VRisingServerPath)\BepInEx\core\Il2CppInterop.Runtime.dll" />
+    <Reference Include="Il2Cppmscorlib" HintPath="$(VRisingServerPath)\BepInEx\interop\Il2Cppmscorlib.dll" />
+    <Reference Include="ProjectM" HintPath="$(VRisingServerPath)\BepInEx\interop\ProjectM.dll" />
+    <Reference Include="ProjectM.Shared" HintPath="$(VRisingServerPath)\BepInEx\interop\ProjectM.Shared.dll" />
+    <Reference Include="Stunlock.Core" HintPath="$(VRisingServerPath)\BepInEx\interop\Stunlock.Core.dll" />
+    <Reference Include="Unity.Collections" HintPath="$(VRisingServerPath)\BepInEx\interop\Unity.Collections.dll" />
+    <Reference Include="Unity.Entities" HintPath="$(VRisingServerPath)\BepInEx\interop\Unity.Entities.dll" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(VRisingServerPath)\BepInEx\interop\UnityEngine.CoreModule.dll" />
+  </ItemGroup>
+</Project>
